@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.phonegap.fivetouch" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>FiveTouch</name>
     <description>
         Initial tests
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
+    <author email="support@phonegap.com" href="http://www.fivetechsoft.com">
         FiveTech Software
     </author>
     <content src="index.html" />
+    <preference name="SplashScreen" value="fivetech"/>
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.5.0" />
     <preference name="orientation" value="default" />
