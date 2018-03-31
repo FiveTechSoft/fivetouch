@@ -1,26 +1,29 @@
 QT        += core gui network
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
-
 TARGET    =  fivetouch
 TEMPLATE  =  app
 
-SOURCES   += main.cpp \
-    fivetouch.c  
+SOURCES   += main.cpp
 
-HEADERS   += \   
-    fivetouch.prg
-FORMS     += 
-RESOURCES += 
+PRGS = fivetouch.prg \
+       buildch.prg
+
+OTHER_FILES += $$PRGS
+
+QMAKE_CFLAGS += -Ic:/harbour/include
+INCLUDEPATH += c:/harbour/include
+
+harbour.output  = $$PWD/${QMAKE_FILE_BASE}.c
+harbour.commands = c:\harbour\bin\harbour ${QMAKE_FILE_NAME} -n -o${QMAKE_FILE_OUT}
+harbour.variable_out = SOURCES
+harbour.input = PRGS
+QMAKE_EXTRA_COMPILERS += harbour
 
 CONFIG    += mobility
-MOBILITY  = 
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
 OTHER_FILES += $$PWD/android/AndroidManifest.xml
-
-INCLUDEPATH += C:/harbour/include/
 
 LIBS += -LC:\harbour\lib\android\gccarm -LC:\harbour\contrib\lib\android\gccarm  \
            -Wl,--start-group      \
@@ -131,6 +134,3 @@ LIBS += -LC:\harbour\lib\android\gccarm -LC:\harbour\contrib\lib\android\gccarm 
  COMMON_DATA.path = /assets
  COMMON_DATA.files = $$files($$PWD/samples/*)
  INSTALLS += COMMON_DATA
-
-DISTFILES += \
-    test.prg
