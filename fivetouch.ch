@@ -1,6 +1,7 @@
 #ifdef READ_CH
    TEXT INTO cCode
-endif
+#endif
+
 #ifndef FTVERSION
 #define FTVERSION 2.0
 
@@ -213,4 +214,4 @@ endif
 
 #ifdef READ_CH
    ENDTEXT
-endif
+#endif
