@@ -1,6 +1,6 @@
 [![](https://bitbucket.org/fivetech/screenshots/downloads/fivetech_logo.gif)](http://www.fivetechsoft.com "FiveTech Software")
 
-# fivetouch
+# FiveTouch
 
 FiveTouch is an interactive development app for Android and iOS, kind of a modern dBase III, built using Harbour and QT.
 
