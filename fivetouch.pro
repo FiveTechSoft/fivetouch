@@ -5,15 +5,15 @@ TEMPLATE  =  app
 
 SOURCES   += main.cpp
 
-PRGS = .\source\fivetouch.prg \
-       .\source\buildch.prg \
-       .\source\extend.prg \
-       .\source\files.prg \
-       .\source\function.prg \
-       .\source\ide.prg \
-       .\source\msgs.prg \
-       .\source\run.prg \
-       .\source\system.prg
+PRGS = .\prgs\fivetouch.prg \
+       .\prgs\buildch.prg \
+       .\prgs\extend.prg \
+       .\prgs\files.prg \
+       .\prgs\function.prg \
+       .\prgs\ide.prg \
+       .\prgs\msgs.prg \
+       .\prgs\run.prg \
+       .\prgs\system.prg
 
 OTHER_FILES += $$PRGS
 
