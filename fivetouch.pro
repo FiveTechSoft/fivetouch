@@ -1,4 +1,4 @@
-QT        += core gui network
+QT        += core gui network widgets printsupport
 
 TARGET    =  fivetouch
 TEMPLATE  =  app
