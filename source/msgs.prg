@@ -67,3 +67,14 @@ function MsgGet( cMsg, uValue )
 return uValue
 
 //----------------------------------------------------------------------------//
+
+function QSelFile( oWndParent, cTitle, cPath, cFilter )
+
+   DEFAULT oWndParent := WndMain()
+   DEFAULT cTitle := "Open Files Source/Header"
+   DEFAULT cPath   := ".\"
+   DEFAULT cFilter := "Source/Header Files (*.prg *.ch *.h)"
+
+return QFileDialog( oWndParent ):GetOpenFileName( oWndParent, cTitle, cPath, cFilter )
+
+//----------------------------------------------------------------------------//

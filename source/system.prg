@@ -33,3 +33,9 @@ function DownloadLocation()
 return QStandardPaths():StandardLocations( 14 ):Value( 0 )
 
 //----------------------------------------------------------------------------//
+
+function nRGB( nRed, nGreen, nBlue )
+
+return ( nBlue * 65536 ) + ( nGreen * 256 ) + nRed
+
+//----------------------------------------------------------------------------//

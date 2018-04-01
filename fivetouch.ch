@@ -5,11 +5,18 @@
 #ifndef FTVERSION
 #define FTVERSION 2.0
 
+#include "hbclass.ch"
+
 #define CRLF hb_eol()
 
 #command ? [ <list,...> ] => ConsoleOut( [ { <list> } ] )
 
 #xcommand TEXT INTO <v> => #pragma __cstream|<v>:=%s
+
+#xcommand DEFAULT <uVar1> := <uVal1> ;
+               [, <uVarN> := <uValN> ] => ;
+                  If( <uVar1> == nil, <uVar1> := <uVal1>, ) ;;
+                [ If( <uVarN> == nil, <uVarN> := <uValN>, ); ]
 
 #xcommand DEFINE WINDOW <oWnd> ;
              [ TITLE <cTitle> ] ;

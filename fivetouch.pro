@@ -7,17 +7,21 @@ SOURCES   += main.cpp
 
 PRGS = .\source\fivetouch.prg \
        .\source\buildch.prg \
+       .\source\files.prg \
        .\source\function.prg \
+       .\source\ide.prg \
        .\source\msgs.prg \
+       .\source\run.prg \
        .\source\system.prg
 
 OTHER_FILES += $$PRGS
 
-QMAKE_CFLAGS += -Ic:/harbour/include
-INCLUDEPATH += c:/harbour/include
+HARBOUR_INCLUDE = c:/harbour/include
+QMAKE_CFLAGS += -I$$HARBOUR_INCLUDE
+INCLUDEPATH += $$HARBOUR_INCLUDE
 
 harbour.output  = $$PWD/${QMAKE_FILE_BASE}.c
-harbour.commands = c:\harbour\bin\harbour ${QMAKE_FILE_NAME} -n -I$$PWD -o${QMAKE_FILE_OUT}
+harbour.commands = c:\harbour\bin\harbour ${QMAKE_FILE_NAME} -n -I$$PWD -I$$HARBOUR_INCLUDE -o${QMAKE_FILE_OUT}
 harbour.variable_out = SOURCES
 harbour.input = PRGS
 QMAKE_EXTRA_COMPILERS += harbour
