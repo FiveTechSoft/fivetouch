@@ -8,7 +8,8 @@ SOURCES   += main.cpp
 PRGS = .\source\fivetouch.prg \
        .\source\buildch.prg \
        .\source\function.prg \
-       .\source\msgs.prg
+       .\source\msgs.prg \
+       .\source\system.prg
 
 OTHER_FILES += $$PRGS
 
