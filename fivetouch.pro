@@ -26,7 +26,7 @@ ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
 OTHER_FILES += $$PWD/android/AndroidManifest.xml
 
-LIBS += -LC:\harbour\lib\android\gccarm -LC:\harbour\contrib\lib\android\gccarm  \
+LIBS += -LC:\harbour\lib\android  \
            -Wl,--start-group      \
                 -lhbamf \
                 -lhbblink \
