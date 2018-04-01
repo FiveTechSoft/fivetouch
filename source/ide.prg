@@ -32,8 +32,9 @@ CLASS TIde
    DATA oFolder
    DATA aEditors INIT {}
    DATA oEditor
-   DATA lPhoneMode
+   DATA lPhoneMode INIT .T.
    DATA oFuncList
+   DATA lScintilla INIT .T.
 
    METHOD New() CONSTRUCTOR
    METHOD PhoneMode()
@@ -138,7 +139,7 @@ METHOD PhoneMode() CLASS TIde
    	
    oLayout = QVBoxLayout()	
    ::oWndMain:SetLayout( oLayout )
-   oLayout:AddWidget( oFolder )	
+   oLayout:AddWidget( ::oFolder )
    ::oWndMain:SetWindowTitle( "FiveTouch" )
 
    ::OpenFile( "tutor01.prg" )
@@ -222,16 +223,16 @@ METHOD OpenFile( cFileName ) CLASS TIde
 
    DEFAULT cFileName := "noname.prg"
 
-   if ! lScintilla
-      AAdd( ::aEditors, ::oEditor := QTextEdit( oWnd ) )
+   if ! ::lScintilla
+      AAdd( ::aEditors, ::oEditor := QTextEdit( ::oWndMain ) )
    else
-      AAdd( ::aEditors, ::oEditor := QSciScintilla( oWnd ) )
+      AAdd( ::aEditors, ::oEditor := QSciScintilla( ::oWndMain ) )
    endif
    	
    ::oEditor:cFileName = cFileName 	
 
    ::oFolder:AddTab( ::oEditor, cFileNoPath( cFileName ) )
-   ::oFolder:SetCurrentIndex( oFolder:Count() - 1 )
+   ::oFolder:SetCurrentIndex( ::oFolder:Count() - 1 )
 
    ::SetupEditor()
    	
@@ -297,7 +298,7 @@ METHOD Setup() CLASS TIde
    oChkScintilla = QCheckBox( oDlg )	
    oChkScintilla:Move( 30, 30 )
    oChkScintilla:SetText( "use Scintilla" )	
-   oChkScintilla:SetCheckState( If( lScintilla, 2, 0 ) )	
+   oChkScintilla:SetCheckState( If( ::lScintilla, 2, 0 ) )
    	
    oBtnOk = QPushButton( oDlg )
    oBtnOk:SetText( "Ok" )

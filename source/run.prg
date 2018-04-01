@@ -39,7 +39,7 @@ function DoBreak( oError )
       next
    endif
 
-   n = 8
+   n = 1 // 8
    while ! Empty( ProcName( n ) )
       cCallStack += "Called from: " + ProcFile( n ) + " => " + ;
        			     Trim( ProcName( n ) ) + ;

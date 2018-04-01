@@ -7,6 +7,7 @@ SOURCES   += main.cpp
 
 PRGS = .\source\fivetouch.prg \
        .\source\buildch.prg \
+       .\source\extend.prg \
        .\source\files.prg \
        .\source\function.prg \
        .\source\ide.prg \

@@ -8,10 +8,13 @@
 
 function Main()
 
-   local oOldError := ErrorBlock( { | o | DoBreak( o ) } )
-   local oIde := TIde():New()
+   local oIde
 
+   ErrorBlock( { | o | DoBreak( o ) } )
+   ExtendClasses()
    Build_FiveTouch_CH()
+
+   oIde = TIde():New()
    
    SysRefresh()
    
