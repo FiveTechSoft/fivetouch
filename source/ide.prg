@@ -243,8 +243,7 @@ METHOD OpenFile( cFileName ) CLASS TIde
                          "function Main()" + ;
                          hb_eol() + hb_eol() + ;
                          "   local oDlg" + hb_eol() + hb_eol() + ;
-                         "   DEFINE DIALOG oDlg" + hb_eol() + hb_eol() + ;							  
-                         "   ACTIVATE DIALOG oDlg CENTERED" + hb_eol() + hb_eol() + ;							  
+                         '   MsgInfo( "Hello world from FiveTouch" )' + hb_eol() + hb_eol() + ;
                          "return nil" )
    endif                    							  
 

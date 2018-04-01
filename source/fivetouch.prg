@@ -11,13 +11,11 @@ function Main()
    local oIde
 
    ErrorBlock( { | o | DoBreak( o ) } )
+
    ExtendClasses()
    Build_FiveTouch_CH()
 
    oIde = TIde():New()
-   
-   SysRefresh()
-   
    oIde:PhoneMode()
    
 return nil
