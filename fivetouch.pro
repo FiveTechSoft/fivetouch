@@ -6,7 +6,8 @@ TEMPLATE  =  app
 SOURCES   += main.cpp
 
 PRGS = fivetouch.prg \
-       buildch.prg
+       buildch.prg \
+       msgs.prg
 
 OTHER_FILES += $$PRGS
 
