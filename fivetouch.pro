@@ -5,9 +5,10 @@ TEMPLATE  =  app
 
 SOURCES   += main.cpp
 
-PRGS = fivetouch.prg \
-       buildch.prg \
-       msgs.prg
+PRGS = .\source\fivetouch.prg \
+       .\source\buildch.prg \
+       .\source\function.prg \
+       .\source\msgs.prg
 
 OTHER_FILES += $$PRGS
 
@@ -15,7 +16,7 @@ QMAKE_CFLAGS += -Ic:/harbour/include
 INCLUDEPATH += c:/harbour/include
 
 harbour.output  = $$PWD/${QMAKE_FILE_BASE}.c
-harbour.commands = c:\harbour\bin\harbour ${QMAKE_FILE_NAME} -n -o${QMAKE_FILE_OUT}
+harbour.commands = c:\harbour\bin\harbour ${QMAKE_FILE_NAME} -n -I$$PWD -o${QMAKE_FILE_OUT}
 harbour.variable_out = SOURCES
 harbour.input = PRGS
 QMAKE_EXTRA_COMPILERS += harbour
@@ -106,10 +107,10 @@ LIBS += -LC:\harbour\lib\android  \
                 -lhbpcre \
                 -ljpeg \
                 -lpng \
-                #-lgtnet \
-                #-ldbrmap \
+                -lgtnet \
+                -ldbrmap \
                 -lhbqtwidgets \
-                #-lhbqtzxing \
+                -lhbqtzxing \
                 -lhbqtsensors \
                 -lhbqtquick \
                 -lhbqtqml \
@@ -128,8 +129,8 @@ LIBS += -LC:\harbour\lib\android  \
                 -lhbqtgui \
                 -lhbqtcore \
                 -lhbxbp \
-                #-lqscintilla2 \
-                #-lhbqscintilla \
+                -lqscintilla2 \
+                -lhbqscintilla \
            -Wl,--end-group
 
  COMMON_DATA.path = /assets
