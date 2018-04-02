@@ -8,7 +8,7 @@ function RunScript( cCode )
       return nil
    endif   		
    
-   oHrb = HB_CompileFromBuf( StrTran( cCode, "Main", "__Main" ), "-n" )
+   oHrb = HB_CompileFromBuf( StrTran( cCode, "Main", "__Main" ), .T., "-n" )
    
    if oHrb == nil
       MsgInfo( "Error in code" )
@@ -39,7 +39,7 @@ function DoBreak( oError )
       next
    endif
 
-   n = 1 // 8
+   n = 8
    while ! Empty( ProcName( n ) )
       cCallStack += "Called from: " + ProcFile( n ) + " => " + ;
        			     Trim( ProcName( n ) ) + ;
@@ -48,8 +48,8 @@ function DoBreak( oError )
    end
       
    MsgInfo( oError:Description + hb_eol() + cInfo + hb_eol() + hb_eol() + ;
-   	      cCallStack, "Error at line:" + " " + ;
-            AllTrim( Str( ProcLine( 2 ) ) ) )
+            cCallStack, "Error at line:" + " " + ;
+            SubStr( oError:operation, At( ":", oError:operation ) + 1 ) )
 
    BREAK
 

@@ -40,7 +40,7 @@ CLASS TIde
    METHOD PhoneMode()
    METHOD OpenFile()
    METHOD SaveFile()
-   METHOD SelFile() INLINE QSelFile( ::oWndMain )
+   METHOD SelFile() INLINE QSelFile( ::oWndMain,, QStandardPaths():writableLocation( 9 ) )
    METHOD Setup()
    METHOD SetupEditor()
    METHOD CloseFile()

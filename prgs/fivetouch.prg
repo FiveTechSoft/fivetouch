@@ -13,7 +13,10 @@ function Main()
    ErrorBlock( { | o | DoBreak( o ) } )
 
    ExtendClasses()
-   Build_FiveTouch_CH()
+
+   QFile( "assets:/FiveTouch.ch" ):copy( "FiveTouch.ch" )
+   QFile( "assets:/hbclass.ch" ):copy( "hbclass.ch" )
+   QFile( "assets:/hboo.ch" ):copy( "hboo.ch" )
 
    oIde = TIde():New()
    oIde:PhoneMode()

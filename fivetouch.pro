@@ -6,7 +6,6 @@ TEMPLATE  =  app
 SOURCES   += main.cpp
 
 PRGS = .\prgs\fivetouch.prg \
-       .\prgs\buildch.prg \
        .\prgs\extend.prg \
        .\prgs\files.prg \
        .\prgs\function.prg \
@@ -140,5 +139,8 @@ LIBS += -LC:\harbour\lib\android  \
            -Wl,--end-group
 
  COMMON_DATA.path = /assets
- COMMON_DATA.files = $$files($$PWD/samples/*)
+ COMMON_DATA.files = $$PWD/FiveTouch.ch
+ COMMON_DATA.files += c:/harbour/include/hbclass.ch
+ COMMON_DATA.files += c:/harbour/include/hboo.ch
+ COMMON_DATA.depends = FORCE
  INSTALLS += COMMON_DATA

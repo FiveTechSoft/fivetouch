@@ -1,7 +1,3 @@
-#ifdef READ_CH
-   TEXT INTO cCode
-#endif
-
 #ifndef FTVERSION
 #define FTVERSION 2.0
 
@@ -217,8 +213,4 @@
           [; <oRTF>:Move( <nCol>, <nRow> ) ] ;
           [; <oRTF>:setAcceptRichText( .T. ) ]          
 
-#endif
-
-#ifdef READ_CH
-   ENDTEXT
 #endif
