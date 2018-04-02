@@ -1,9 +1,5 @@
 #include "FiveTouch.ch"
 
-#define __HBEXTREQ__
-#include "harbour.hbx"
-#include "c:\harbour\contrib\hbct\hbct.hbx"
-
 //----------------------------------------------------------------------------//
 
 function Main()
@@ -12,11 +8,9 @@ function Main()
 
    ErrorBlock( { | o | DoBreak( o ) } )
 
+   Link()
    ExtendClasses()
-
-   QFile( "assets:/FiveTouch.ch" ):copy( "FiveTouch.ch" )
-   QFile( "assets:/hbclass.ch" ):copy( "hbclass.ch" )
-   QFile( "assets:/hboo.ch" ):copy( "hboo.ch" )
+   CopyFiles()
 
    oIde = TIde():New()
    oIde:PhoneMode()

@@ -10,6 +10,7 @@ PRGS = .\prgs\fivetouch.prg \
        .\prgs\files.prg \
        .\prgs\function.prg \
        .\prgs\ide.prg \
+       .\prgs\link.prg \
        .\prgs\msgs.prg \
        .\prgs\run.prg \
        .\prgs\system.prg

@@ -35,3 +35,13 @@ function lIsDir( cDirName )   // Checks an existing directory
 return Len( aResult ) == 1 .and. "D" $ aResult[ 1 ][ 5 ]
 
 //----------------------------------------------------------------------------//
+
+function CopyFiles()
+
+   QFile( "assets:/FiveTouch.ch" ):copy( "FiveTouch.ch" )
+   QFile( "assets:/hbclass.ch" ):copy( "hbclass.ch" )
+   QFile( "assets:/hboo.ch" ):copy( "hboo.ch" )
+
+return nil
+
+//----------------------------------------------------------------------------//
