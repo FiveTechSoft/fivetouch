@@ -1,3 +1,5 @@
+#include "FiveTouch.ch"
+
 //----------------------------------------------------------------------------// 
 
 function cFileNoExt( cPathMask ) // returns the filename without ext
