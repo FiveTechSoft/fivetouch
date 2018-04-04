@@ -91,3 +91,19 @@ function SelFile( cPath )
 return cPath + cFileName
 
 //----------------------------------------------------------------------------//
+
+static function ReadFiles( cPath, oLbx )
+
+   local n, aFiles := Directory( cPath + "*.*", "D" )
+
+   // MsgInfo( cPath + "*.*" )                              
+                                 											
+   oLbx:Clear()
+
+   for n = 1 TO Len( aFiles )
+      oLbx:AddItem( aFiles[ n ][ 1 ] )
+   next
+
+return nil
+
+//----------------------------------------------------------------------------//
