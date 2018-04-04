@@ -12,6 +12,8 @@ function Main()
    ExtendClasses()
    CopyFiles()
 
+   QApplication():SetStyleSheet( DarkOrangeStyle() )
+
    oIde = TIde():New()
    oIde:PhoneMode()
    
