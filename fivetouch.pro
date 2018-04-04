@@ -13,7 +13,8 @@ PRGS = .\prgs\fivetouch.prg \
        .\prgs\link.prg \
        .\prgs\msgs.prg \
        .\prgs\run.prg \
-       .\prgs\system.prg
+       .\prgs\system.prg \
+       .\prgs\themes.prg
 
 OTHER_FILES += $$PRGS
 
