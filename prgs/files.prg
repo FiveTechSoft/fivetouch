@@ -45,3 +45,47 @@ function CopyFiles()
 return nil
 
 //----------------------------------------------------------------------------//
+
+function SelFile( cPath )
+
+   local oDlg := QDialog()
+   local oFiles := QListWidget( oDlg )
+   local oBtnOk := QPushButton( oDlg )
+   local oBtnCancel := QPushButton( oDlg )
+   local aFiles, cFileName := ""
+
+   DEFAULT cPath := "./"
+   
+   oDlg:ReSize( 400, 390 )
+   oDlg:Move( 450, 150 )
+   oDlg:SetWindowTitle( "Select a file" )
+   oDlg:SetObjectName( "oWnd" )
+   // oDlg:SetStyleSheet( "#oWnd{ background-color: rgb( 0, 0, 100 ); }" )
+
+   oFiles:Move( 10, 10 )
+   oFiles:Resize( 380, 320 )
+
+   ReadFiles( cPath, oFiles )
+
+   oFiles:Connect( "itemClicked(QListWidgetItem*)",;
+                   { | oItem | cFileName := oItem:Text } )
+
+   oBtnOk:Move( 110, 340 )
+   oBtnOk:ReSize( 80, 40 )
+   oBtnOk:SetText( "Ok" )
+   oBtnOk:Connect( "clicked()", { || If( lIsDir( cPath + cFileName ) .or. ;
+    	                                   Right( cFileName, 1 ) == ".",;
+                                     ( cPath += cFileName + "/", ReadFiles( cPath, oFiles ) ),;
+   	                               oDlg:Done( 1 ) ) } )
+
+   oBtnCancel:Move( 220, 340 )
+   oBtnCancel:ReSize( 80, 40 )
+   oBtnCancel:SetText( "Cancel" )
+   oBtnCancel:Connect( "clicked()", { || cFileName := "", oDlg:Done( 2 ) } )
+
+   oDlg:Center()
+   oDlg:Exec()
+
+return cPath + cFileName
+
+//----------------------------------------------------------------------------//
