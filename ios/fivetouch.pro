@@ -19,7 +19,7 @@ PRGS = ../prgs/fivetouch.prg \
 
 OTHER_FILES += $$PRGS
 
-HARBOUR_INCLUDE = ~/harbour/include
+HARBOUR_INCLUDE = /Users/$USER/harbour/include
 QMAKE_CFLAGS += -I$$HARBOUR_INCLUDE
 INCLUDEPATH += $$HARBOUR_INCLUDE
 
