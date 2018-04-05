@@ -34,7 +34,12 @@ CLASS TIde
    DATA oEditor
    DATA lPhoneMode INIT .T.
    DATA oFuncList
-   DATA lScintilla INIT .T.
+
+   #ifdef FROM_OSX
+      DATA lScintilla INIT .F.
+   #else
+      DATA lScintilla INIT .T.
+   #endif
 
    METHOD New() CONSTRUCTOR
    METHOD PhoneMode()
@@ -242,8 +247,7 @@ METHOD OpenFile( cFileName ) CLASS TIde
       ::oEditor:SetText( '#include "FiveTouch.ch"' + hb_eol() + hb_eol() + ;
                          "function Main()" + ;
                          hb_eol() + hb_eol() + ;
-                         "   local oDlg" + hb_eol() + hb_eol() + ;
-                         '   MsgInfo( "Hello world from FiveTouch" )' + hb_eol() + hb_eol() + ;
+                         '   MsgInfo( "Hello world" )' + hb_eol() + hb_eol() + ;
                          "return nil" )
    endif                    							  
 
