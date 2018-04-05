@@ -1,4 +1,8 @@
-#include "c:\harbour\contrib\xhb\xhbcls.ch"
+#ifdef FROM_OSX
+   #include "../harbour/contrib/xhb/xhbcls.ch"
+#else
+   #include "c:\harbour\contrib\xhb\xhbcls.ch"
+#endif
 
 //----------------------------------------------------------------------------// 
 

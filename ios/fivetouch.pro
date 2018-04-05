@@ -25,7 +25,7 @@ QMAKE_CFLAGS += -I$$HARBOUR_INCLUDE
 INCLUDEPATH += $$HARBOUR_INCLUDE
 
 harbour.output  = ${QMAKE_FILE_BASE}.c
-harbour.commands = ~/harbour/bin/harbour ${QMAKE_FILE_NAME} -n -I$$PWD/.. -I$$HARBOUR_INCLUDE -o${QMAKE_FILE_OUT}
+harbour.commands = ~/harbour/bin/harbour ${QMAKE_FILE_NAME} -n -I$$PWD/.. -DFROM_OSX -I$$HARBOUR_INCLUDE -o${QMAKE_FILE_OUT}
 harbour.variable_out = SOURCES
 harbour.input = PRGS
 QMAKE_EXTRA_COMPILERS += harbour

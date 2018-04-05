@@ -2,3 +2,4 @@
 fivetouch.pro.user
 *.c
 source/checkres.txt
+build-fivetouch-Qt_5_10_1_for_iOS-Release/*
