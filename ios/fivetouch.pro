@@ -5,6 +5,8 @@ CONFIG -= bitcode
 TARGET = fivetouch
 TEMPLATE = app
 
+QMAKE_IOS_DEPLOYMENT_TARGET=8
+
 SOURCES += ../main.cpp
 
 PRGS = ../prgs/fivetouch.prg \
@@ -119,9 +121,10 @@ LIBS += -L~/harbour/lib/ios \
                 #-lhbqscintilla \
            -Wl
 
- COMMON_DATA.path = /assets
- COMMON_DATA.files = $$PWD/../FiveTouch.ch
- COMMON_DATA.files += ~/harbour/include/hbclass.ch
- COMMON_DATA.files += ~/harbour/include/hboo.ch
- COMMON_DATA.depends = FORCE
- INSTALLS += COMMON_DATA
+ios {
+    extraFiles.files = ../FiveTouch.ch \
+                       /Users/${USER}/harbour/include/hbclass.ch \
+                       /Users/${USER}/harbour/include/hboo.ch
+    extraFiles.path = .
+    QMAKE_BUNDLE_DATA += extraFiles
+}
