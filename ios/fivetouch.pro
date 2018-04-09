@@ -5,6 +5,8 @@ CONFIG -= bitcode
 TARGET = fivetouch
 TEMPLATE = app
 
+QMAKE_IOS_DEPLOYMENT_TARGET=8
+
 SOURCES += ../main.cpp
 
 PRGS = ../prgs/fivetouch.prg \
