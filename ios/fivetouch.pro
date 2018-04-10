@@ -117,8 +117,8 @@ LIBS += -L~/harbour/lib/ios \
                 -lhbqtgui \
                 -lhbqtcore \
                 -lhbxbp \
-                #-lqscintilla2 \
-                #-lhbqscintilla \
+                -lqscintilla2 \
+                -lhbqscintilla \
            -Wl
 
 ios {

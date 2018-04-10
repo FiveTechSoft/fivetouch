@@ -23,9 +23,17 @@ return nil
 
 #ifdef FROM_OSX
 
-function QSCISCINTILLA()
+// function QSCISCINTILLA()
 
-return nil
+// return nil
+
+#pragma BEGINDUMP
+
+void hbqt_del_QsciAbstractAPIs( void ) {}
+
+void hbqt_del_QsciCommandSet( void ) {}
+
+#pragma ENDDUMP
 
 #endif
 

@@ -36,7 +36,7 @@ CLASS TIde
    DATA oFuncList
 
    #ifdef FROM_OSX
-      DATA lScintilla INIT .F.
+      DATA lScintilla INIT .T.
    #else
       DATA lScintilla INIT .T.
    #endif
