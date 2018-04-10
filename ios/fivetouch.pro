@@ -124,7 +124,8 @@ LIBS += -L~/harbour/lib/ios \
 ios {
     extraFiles.files = ../FiveTouch.ch \
                        /Users/${USER}/harbour/include/hbclass.ch \
-                       /Users/${USER}/harbour/include/hboo.ch
+                       /Users/${USER}/harbour/include/hboo.ch \
+                       $$PWD/../samples/tutor02.prg
     extraFiles.path = .
     QMAKE_BUNDLE_DATA += extraFiles
 }
