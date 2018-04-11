@@ -7,7 +7,7 @@
    #include "c:\harbour\contrib\hbct\hbct.hbx"
 #endif
 
-extern QToolbar, QToolButton, QLabel, QButton
+extern QToolbar, QToolButton, QLabel, QPushButton
 
 function Link()
 
