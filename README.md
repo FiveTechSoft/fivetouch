@@ -6,6 +6,8 @@ FiveTouch is an interactive development app for Android and iOS, kind of a moder
 
 You can develop your xBase apps directly from your Android or iOS device or from your PC.
 
+Please review the [FiveTouch wiki](https://github.com/FiveTechSoft/fivetouch/wiki) to start building and learning FiveTouch
+
 ***
 [![](https://bitbucket.org/fivetech/screenshots/downloads/harbour.jpg)](https://harbour.github.io "The Harbour Project")
 
