@@ -10,7 +10,8 @@ function Main()
    WndSetColor( oDlg, nRGB( 200, 100, 0 ) )
    	
    oBar:SetIconSize( QSize( 80, 80 ) )   		
-   oBar:AddWidget( oBtn := QToolButton( oBar ) )   
+   oBar:AddWidget( oBtn := QToolButton( oBar ) )
+   oBtn:Connect( "clicked()", { || oDlg:End() } ) 
    oBtn:SetIcon( QIcon() )      		
    	
    oDlg:Exec()
