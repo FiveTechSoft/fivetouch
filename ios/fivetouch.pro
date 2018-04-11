@@ -134,4 +134,8 @@ ios
                        /Users/${USER}/harbour/include/hboo.ch
    headerFiles.path = /include
    QMAKE_BUNDLE_DATA += headerFiles
+
+   imageFiles.files = ../images/cancel.png
+   imageFiles.path = /images
+   QMAKE_BUNDLE_DATA += imageFiles
 }

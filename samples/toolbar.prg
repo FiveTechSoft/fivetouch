@@ -12,7 +12,7 @@ function Main()
    oBar:SetIconSize( QSize( 80, 80 ) )   		
    oBar:AddWidget( oBtn := QToolButton( oBar ) )
    oBtn:Connect( "clicked()", { || oDlg:End() } ) 
-   oBtn:SetIcon( QIcon() )      		
+   oBtn:SetIcon( QIcon( "./images/cancel.png" ) )
    	
    oDlg:Exec()
          
