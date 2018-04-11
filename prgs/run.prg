@@ -8,7 +8,7 @@ function RunScript( cCode )
       return nil
    endif   		
    
-   oHrb = HB_CompileFromBuf( StrTran( cCode, "Main", "__Main" ), .T., "-n" )
+   oHrb = HB_CompileFromBuf( StrTran( cCode, "Main", "__Main" ), .T., "-n", "-I./include" )
    
    if oHrb == nil
       MsgInfo( "Error in code" )

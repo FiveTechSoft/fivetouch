@@ -121,11 +121,16 @@ LIBS += -L~/harbour/lib/ios \
                 -lhbqscintilla \
            -Wl
 
-ios {
-    extraFiles.files = ../FiveTouch.ch \
+ios
+{
+   sampleFiles.files = $$PWD/../samples/tutor02.prg \
+                       $$PWD/../samples/browse.prg
+   sampleFiles.path = .
+   QMAKE_BUNDLE_DATA += sampleFiles
+
+   headerFiles.files = ../FiveTouch.ch \
                        /Users/${USER}/harbour/include/hbclass.ch \
-                       /Users/${USER}/harbour/include/hboo.ch \
-                       $$PWD/../samples/tutor02.prg
-    extraFiles.path = .
-    QMAKE_BUNDLE_DATA += extraFiles
+                       /Users/${USER}/harbour/include/hboo.ch
+   headerFiles.path = /include
+   QMAKE_BUNDLE_DATA += headerFiles
 }
