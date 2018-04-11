@@ -125,7 +125,8 @@ ios
 {
    sampleFiles.files = $$PWD/../samples/tutor02.prg \
                        $$PWD/../samples/browse.prg  \
-                       $$PWD/../samples/toolbar.prg
+                       $$PWD/../samples/toolbar.prg \
+                       $$PWD/../samples/bus.prg
    sampleFiles.path = .
    QMAKE_BUNDLE_DATA += sampleFiles
 
@@ -136,7 +137,8 @@ ios
    QMAKE_BUNDLE_DATA += headerFiles
 
    imageFiles.files = ../images/cancel.png \
-                      ../images/plus.png
+                      ../images/plus.png \
+                      ../images/bus.png
    imageFiles.path = /images
    QMAKE_BUNDLE_DATA += imageFiles
 }
