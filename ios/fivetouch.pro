@@ -125,6 +125,7 @@ ios
 {
    sampleFiles.files = $$PWD/../samples/tutor02.prg \
                        $$PWD/../samples/browse.prg  \
+                       $$PWD/../samples/folder.prg  \
                        $$PWD/../samples/toolbar.prg \
                        $$PWD/../samples/bus.prg
    sampleFiles.path = .
