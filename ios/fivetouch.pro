@@ -135,7 +135,8 @@ ios
    headerFiles.path = /include
    QMAKE_BUNDLE_DATA += headerFiles
 
-   imageFiles.files = ../images/cancel.png
+   imageFiles.files = ../images/cancel.png \
+                      ../images/plus.png
    imageFiles.path = /images
    QMAKE_BUNDLE_DATA += imageFiles
 }
